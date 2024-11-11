@@ -11,6 +11,7 @@ class JenkinsServiceTest {
 
     @Test
     public void testService(){
-        assertEquals(55, service.hap(10));
+        assertEquals(5050, service.hap(100));
+
     }
 }
