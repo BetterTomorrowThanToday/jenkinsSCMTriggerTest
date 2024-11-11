@@ -2,12 +2,12 @@ pipeline {
     agent any
 
     stages {
-        stage("Permission") {
-            steps {
-                echo "Adding execute permission to gradlew"
-                sh "chmod +x ./gradlew"
-            }
-        }
+//         stage("Permission") {
+//             steps {
+//                 echo "Adding execute permission to gradlew"
+//                 sh "chmod +x ./gradlew"
+//             }
+//         }
 
         stage("Compile") {
             steps {
