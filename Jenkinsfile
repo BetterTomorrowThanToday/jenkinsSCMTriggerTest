@@ -3,6 +3,7 @@ pipeline{
     stages{
         stages("Checkout"){
             steps{
+                echo "checkout"
             }
         }
     }
