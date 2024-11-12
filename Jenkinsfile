@@ -12,17 +12,17 @@ pipeline {
                 sh "./gradlew compileJava"
             }
         }
-//         stage("Unit Test") {
-//             steps {
-//                 echo "Running unit tests"
-//                 sh "./gradlew test"
-//             }
-//             post {
-//                 always {
-//                     junit '**/build/test-logs/*.xml'
-//                 }
-//             }
-//         }
+        stage("Unit Test") {
+            steps {
+                echo "Running unit tests"
+                sh "./gradlew test"
+            }
+            post {
+                always {
+                    junit '**/build/test-logs/*.xml'
+                }
+            }
+        }
     }
     post {
         success {
