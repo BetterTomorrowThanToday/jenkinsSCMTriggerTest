@@ -1,22 +1,25 @@
 pipeline {
     agent any
-    stage("permission"){
-                steps{
-                     sh "chmod +x ./gradlew"
-                }
+
+    stages { // stages 블록 추가
+        stage("permission") { // stage 이름 명시
+            steps {
+                sh "chmod +x ./gradlew"
             }
-            stage("compile"){
-                steps{
-                     sh "./gradlew compileJava"
-                }
+        }
+        stage("compile") { // stage 이름 명시
+            steps {
+                sh "./gradlew compileJava"
             }
-            stage("test"){
-                steps{
-                     sh "./gradlew test"
-                }
+        }
+        stage("test") { // stage 이름 명시
+            steps {
+                sh "./gradlew test"
             }
-     }
+        }
+    }
 }
+
 //     stages {
 //         stage("Permission"){
 //             steps{
