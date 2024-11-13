@@ -1,21 +1,21 @@
 pipeline {
     agent any
-    stage("permission"){
-                steps{
-                     sh "chmod +x ./gradlew"
-                }
-            }
-            stage("compile"){
-                steps{
-                     sh "./gradlew compileJava"
-                }
-            }
-            stage("test"){
-                steps{
-                     sh "./gradlew test"
-                }
-            }
-     }
+    stage("permission") {
+        steps{
+            sh "chmod +x ./gradlew"
+        }
+    }
+    stage("compile"){
+        steps{
+            sh "./gradlew compileJava"
+        }
+    }
+    stage("test"){
+        steps{
+            sh "./gradlew test"
+        }
+    }
+}
 //     stages {
 //         stage("Permission"){
 //             steps{
@@ -48,4 +48,4 @@ pipeline {
 //             echo "Pipeline failed."
 //         }
 //     }
-}
+// }
