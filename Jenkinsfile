@@ -18,7 +18,8 @@ pipeline {
             }
             post { // test 단계의 post 블록
                 always {
-                    junit '**/build/test-logs/*.xml'
+                    junit '**/build/test-results/test/*.xml'
+
                 }
             }
         }
